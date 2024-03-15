@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ProductData } from '../products';
 import { Router, NavigationExtras } from '@angular/router';
+import { pushcart ,productid} from '../cartpro';
 
 @Component({
   selector: 'app-getproduct',
@@ -40,5 +41,12 @@ export class GetproductComponent {
       
       this.router.navigate(["/ORDER"], navigationExtras);
     }
+  }
+
+  addCart(pro:ProductData){
+    alert("called cart button");
+    pushcart(pro.ProductId);
+    console.log(productid);
+    
   }
 }

@@ -1,8 +1,9 @@
 <h2>Available Products</h2>
-<div class="body1">
-  
+<div class="Body">
   <div  *ngFor="let product of products" class="product-list" >  
-    <button type="submit" (click)="addOrder(product)"  class="">{{ product.ProductName }}
-    <p>{{product.Quantity}}</p></button>
+    <h4>{{ product.ProductName }}  </h4><p>  {{product.Quantity}}</p>
+    
+    <button type="submit" (click)="addOrder(product)"  class="button">Purchase</button>
+    <button (click)="addCart(product)">Cart</button>
   </div>
 </div>

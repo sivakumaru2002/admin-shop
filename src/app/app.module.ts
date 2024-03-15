@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { FuzzysearchComponent } from './fuzzysearch/fuzzysearch.component';
 import { OrderComponent } from './order/order.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const appRoute: Routes =[
@@ -28,7 +29,7 @@ const appRoute: Routes =[
   },{
     path:'SEARCH',component:SearchComponent,
   },{
-    path:'ORDER',component:OrderComponent,
+    path:'CART',component:CartComponent,
   }
 ]
 
@@ -41,6 +42,7 @@ const appRoute: Routes =[
     SearchComponent,
     FuzzysearchComponent,
     OrderComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
