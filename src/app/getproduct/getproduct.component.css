@@ -1,0 +1,36 @@
+/* Center the content horizontally */
+.body1 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Create columns with a minimum width of 200px */
+  gap: 10px; /* Add gap between items */
+  justify-content: center; /* Center the content horizontally */
+  padding: 0%;
+}
+
+h2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button{
+  background-color: #007bff; /* Green background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.button:hover {
+  background-color: #88d6f0;
+}
+/* Style the product list */
+.product-list {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+}
+
+/* Style the buttons */
+.product-list button {
+  width: 80%; /* Set the width of the buttons to fill the available space */
+  padding: 30px; /* Set padding as needed */
+}

@@ -1,0 +1,12 @@
+/* src/styles.css */
+body {
+  background-image: url(https://png.pngtree.com/png-clipart/20190520/original/pngtree-abstract-low-poly-design-png-image_3550152.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* angular:styles/global:styles */
+/*# sourceMappingURL=styles.css.map */

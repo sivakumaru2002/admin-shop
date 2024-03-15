@@ -1,0 +1,12 @@
+<body>
+<div class="farea"><form  (ngSubmit)="ConfirmOrder()">
+  <h2>{{prod.ProductName}}</h2>
+  <h3>Availabe quantity<==>{{prod.Quantity}}</h3>
+  <label>Product quantity</label>
+  <input type="number" name="Pquan"  [(ngModel)]="pquan">
+  <div class="container">
+  <button type="submit">Add Product</button>
+  </div>
+</form>
+</div>  
+</body>

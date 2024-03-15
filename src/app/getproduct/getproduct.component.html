@@ -1,0 +1,8 @@
+<h2>Available Products</h2>
+<div class="body1">
+  
+  <div  *ngFor="let product of products" class="product-list" >  
+    <button type="submit" (click)="addOrder(product)"  class="">{{ product.ProductName }}
+    <p>{{product.Quantity}}</p></button>
+  </div>
+</div>
