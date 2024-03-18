@@ -5,14 +5,14 @@
 }
 
 .nav {
-    text-align: right; /* Shift content to the right */
+    justify-content: right;
     padding: 20px; /* Add some padding for better readability */
 }
 
 .nav h4 {
     display: inline-block;
     margin-left: 20px; /* Add space between each link */
-    color: black;
+
 }
 
 .nav h4 a {

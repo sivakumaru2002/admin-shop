@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes, provideRouter, withComponentInputBinding } from '@angular/router';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +15,9 @@ import { SearchComponent } from './search/search.component';
 import { FuzzysearchComponent } from './fuzzysearch/fuzzysearch.component';
 import { OrderComponent } from './order/order.component';
 import { CartComponent } from './cart/cart.component';
-
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 const appRoute: Routes =[
   {
@@ -30,6 +34,8 @@ const appRoute: Routes =[
     path:'SEARCH',component:SearchComponent,
   },{
     path:'CART',component:CartComponent,
+  },{
+    path:'ORDER',component:OrderComponent,
   }
 ]
 
@@ -49,9 +55,16 @@ const appRoute: Routes =[
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
     RouterModule.forRoot(appRoute),
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
   ],
-  providers: [provideRouter(appRoute, withComponentInputBinding())],
+  providers: [provideRouter(appRoute, withComponentInputBinding()), provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

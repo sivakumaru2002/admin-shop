@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute ,Router} from '@angular/router';
+import { CartService } from '../cart.service';
 import { ProductData } from '../products';
 import { orderdata } from '../orders';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-order',
@@ -26,7 +28,7 @@ export class OrderComponent {
     productId: "",
     quantity: 0
   }
-  constructor(private https:HttpClient,private route:ActivatedRoute,private router:Router) {
+  constructor(private https:HttpClient,private route:ActivatedRoute,private router:Router,private cart:CartService,private toast:ToastrService) {
   }
   ngOnInit():void{
     this.route.queryParams.subscribe((res)=>{
@@ -34,12 +36,13 @@ export class OrderComponent {
         this.prod=ress;
       })
       this.ProductId=res['ProductId'];
+      this.pquan=res['Quantity'];
     })    
   }
 
   ConfirmOrder(){
     if(this.prod.Quantity<this.pquan||this.prod.Quantity<=0||this.pquan<=0){
-      alert("Quantity either exeeded Or in sufficent");
+      this.toast.error("Quantity either exeeded Or in sufficent",'Stock');
     }
     else{
       this.process={
@@ -49,13 +52,12 @@ export class OrderComponent {
         quantity:this.pquan
       }
       this.https.post(this.Orderl,this.process).subscribe(res=>{
-        alert('added sucessfully');
+        this.toast.success('added sucessfully','Purchase');
+        this.cart.afterPurchase(this.prod.ProductName,this.ProductId,this.pquan)
         this.router.navigate(['/GETPRODUCT']);
       },(err)=>{
         alert(err);
       })
-      console.log(this.process);
-      
     }
 
   }

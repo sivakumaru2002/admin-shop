@@ -1,1 +1,12 @@
-<p>cart works!</p>
+<h1 class="h2">Cart</h1>
+<div class="product-container" *ngFor="let i of products">
+    <div class="product-box">
+      <h2>{{i.productname}}</h2>
+      <p>Quantity : {{i.pquan}}</p>
+      <div class="button-container">
+        <button (click)="delete(i)">Remove</button>
+        <button (click)="cartpurchase(i)">Purchase</button>
+      </div>
+    </div>
+  </div>
+  

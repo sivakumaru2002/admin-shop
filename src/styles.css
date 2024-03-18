@@ -1,6 +1,10 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 body {
   background: linear-gradient(to right, #add8e6, #00008b); 
   margin: 0; 
   padding: 0; 
     font-family: Arial, sans-serif;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

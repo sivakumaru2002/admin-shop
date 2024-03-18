@@ -16,9 +16,10 @@ export class HomeComponent {
   navigate1() {
     this.router.navigate(['/GETPRODUCT']);
   }
-
-
   navigate2(){
     this.router.navigate(['/SEARCH']);
+  }
+  navigate3(){
+    this.router.navigate(['/CART']);
   }
 }

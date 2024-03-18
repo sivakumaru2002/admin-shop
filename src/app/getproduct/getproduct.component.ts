@@ -2,7 +2,14 @@ import { Component,OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ProductData } from '../products';
 import { Router, NavigationExtras } from '@angular/router';
-import { pushcart ,productid} from '../cartpro';
+import {CartService} from '../cart.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ToastrService } from 'ngx-toastr';
+
+export class ServiceNameService {
+  constructor() { }
+  
+}
 
 @Component({
   selector: 'app-getproduct',
@@ -15,27 +22,29 @@ export class GetproductComponent {
 
   products: ProductData[] = [];
   pquan:number=0;
-  constructor(private https: HttpClient, private router: Router) {  }
+  constructor(private https: HttpClient, private router: Router,private cart:CartService,private matbar:MatSnackBar,private toast:ToastrService) {  }
   getProduct() {
     this.https.get<ProductData[]>(this.getk).subscribe((res) => {
       this.products = res;
     }, () => {
-      alert('error:-internal server ');
+      this.toast.error('error:-internal server ','Server error');
     })
   }
+
 
   ngOnInit(): void{
     this.getProduct()
   }
 
   addOrder(pro: ProductData) {
-    if (pro.Quantity == 0) {
-      alert('Stock is Empty ADD Products');
+    if (pro.Quantity <= 0) {
+      this.toast.error('Stock is Empty ADD Products','Stock');
 
     } else {
       const navigationExtras: NavigationExtras = {
         queryParams:{
           ProductId:pro.ProductId,
+          Quantity:0
         }
       };
       
@@ -44,9 +53,7 @@ export class GetproductComponent {
   }
 
   addCart(pro:ProductData){
-    alert("called cart button");
-    pushcart(pro.ProductId);
-    console.log(productid);
-    
+  this.cart.addData(pro.ProductId,pro.ProductName)
+  this.toast.success("ADDED TO CART",'Cart!');
   }
 }

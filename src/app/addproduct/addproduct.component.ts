@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-addproduct',
   templateUrl: './addproduct.component.html',
@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AddproductComponent {
   readonly addlink="https://uiexercise.theproindia.com/api/Product/AddProduct";
-  constructor(private https:HttpClient){}
+  constructor(private https:HttpClient,private toast:ToastrService){}
   products: {
     ProductId?: string;
     ProductName: string;
@@ -20,19 +20,24 @@ export class AddproductComponent {
     Quantity: 0,
     IsActive: false
 };
-  addproduct(pro:{Pname:string,Pquan:number}){
+Pname:string="xyz";
+Pquan:number=1;
+ngOnInit(){
+  this.Pname="";
+} 
+addproduct(){
     this.products={
     
-      ProductName:pro.Pname,
-      Quantity:pro.Pquan,
+      ProductName:this.Pname,
+      Quantity:this.Pquan,
       IsActive:true
     }
+    
     this.https.post(this.addlink,this.products).subscribe((res)=>{
-      console.log("success",res);
-      alert("PRODUCT ADDED SUCCESSFULLY")
+      this.toast.success("PRODUCT ADDED SUCCESSFULLY",'Stock');
+ 
     },() => {
-console.log("error");
-alert("Error ,please try again!!!!")
+      this.toast.error("Error ,please try again!!!!");
     })
   }
 }
