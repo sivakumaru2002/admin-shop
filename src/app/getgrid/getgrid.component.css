@@ -10,6 +10,7 @@ h1{
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     grid-gap: 20px;
     padding: 0 20px;
+    color:azure
   }
   
   .grid-item {
