@@ -1,5 +1,5 @@
 .nav {
-    background: linear-gradient(to left, #add8e6, #00008b); /* Gradient from light blue to dark blue */
+    background: linear-gradient(to right, #add8e6, #00008b); /* Gradient from light blue to dark blue */
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
 }
@@ -9,13 +9,13 @@
     padding: 20px; /* Add some padding for better readability */
 }
 
-.nav h4 {
+.nav h2 {
     display: inline-block;
-    margin-left: 20px; /* Add space between each link */
-
+    margin-left: 30px; /* Add space between each link */
+    color:azure;
 }
 
-.nav h4 a {
-   
+.nav h2 a {
+    color:azure;
     text-decoration: none; /* Remove underline from links */
 }

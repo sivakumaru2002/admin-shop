@@ -1,5 +1,7 @@
 <body>
-<div class="farea"><form  (ngSubmit)="ConfirmOrder()">
+<div class="farea">
+  <h1>Order Place</h1>
+  <form  (ngSubmit)="ConfirmOrder()">
   <h2>{{prod.ProductName}}</h2>
   <h3>Availabe quantity<==>{{prod.Quantity}}</h3>
   <label>Product quantity</label>
@@ -8,6 +10,5 @@
   <button type="submit">Confirm Purchase</button>
   </div>
 </form>
-<h1>Order Place</h1>
 </div>  
 </body>

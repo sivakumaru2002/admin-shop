@@ -13,7 +13,8 @@
     align-content: center;
     justify-content: center;
     color: azure;
-    font-size: xx-large
+    font-size: xx-large;
+    font-weight: 700;
 }
 
   .product-box {

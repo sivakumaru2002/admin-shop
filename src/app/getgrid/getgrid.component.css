@@ -2,6 +2,8 @@ h1{
     display:flex;
     justify-content: center;
     color: azure;
+    font-size: xx-large;
+    font-weight: 700;
 }
 .grid-container {
     display: grid;
