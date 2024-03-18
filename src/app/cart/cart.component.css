@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+
   }
   
 .h2{
@@ -11,18 +12,22 @@
     align-items: center;
     align-content: center;
     justify-content: center;
+    color: azure;
+    font-size: xx-large
 }
 
   .product-box {
-    border: 2px solid black;
+    border: 2px solid rgb(55, 136, 218) ;
     background-color: rgb(55, 136, 218);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 20px;
     text-align: center;
+    color: azure;
   }
   
   .button-container {
     margin-top: 10px;
+    
   }
 
   button:hover {
@@ -37,5 +42,6 @@
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 16px; /* Adjust font size for better visibility */
+    color: azure;
   }
   

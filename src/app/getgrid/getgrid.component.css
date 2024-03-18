@@ -1,0 +1,67 @@
+h1{
+    display:flex;
+    justify-content: center;
+    color: azure;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .grid-item {
+    background-color:  rgb(55, 136, 218);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center; /* Center align content */
+  }
+  
+ 
+    .button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 170px;
+      }
+      
+      .button:hover {
+        background-color: #0056b3; /* Darker shade of blue on hover */
+      }
+      .search-container {
+        position: relative;
+      }
+      
+      .search-container input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+      }
+      
+      .search-container input[type="text"]:focus {
+        border-color: #007bff;
+      }
+      
+      .search-container input[type="text"]::placeholder {
+        color: #aaa;
+      }
+      
+      .search-container input[type="text"] + .search-icon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }

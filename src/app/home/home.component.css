@@ -19,6 +19,7 @@
     color: white; /* Text color */
     cursor: pointer; /* Change cursor to pointer on hover */
     font-size: 16px; /* Font size */
+    width: 170px;
 }
 
 /* Change background color on hover */

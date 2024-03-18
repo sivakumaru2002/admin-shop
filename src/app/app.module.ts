@@ -11,13 +11,12 @@ import { AppComponent } from './app.component';
 import { GetproductComponent } from './getproduct/getproduct.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { HomeComponent } from './home/home.component';
-import { SearchComponent } from './search/search.component';
-import { FuzzysearchComponent } from './fuzzysearch/fuzzysearch.component';
 import { OrderComponent } from './order/order.component';
 import { CartComponent } from './cart/cart.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { GetgridComponent } from './getgrid/getgrid.component';
 
 const appRoute: Routes =[
   {
@@ -31,11 +30,11 @@ const appRoute: Routes =[
   },{
     path:'ADDPRODUCT',component:AddproductComponent,
   },{
-    path:'SEARCH',component:SearchComponent,
-  },{
     path:'CART',component:CartComponent,
   },{
     path:'ORDER',component:OrderComponent,
+  },{
+    path :'GETG',component:GetgridComponent,
   }
 ]
 
@@ -45,10 +44,9 @@ const appRoute: Routes =[
     GetproductComponent,
     AddproductComponent,
     HomeComponent,
-    SearchComponent,
-    FuzzysearchComponent,
     OrderComponent,
     CartComponent,
+    GetgridComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +57,7 @@ const appRoute: Routes =[
     MatSnackBarModule,
     RouterModule.forRoot(appRoute),
     ToastrModule.forRoot({
-      timeOut: 10000,
+      timeOut: 5000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),

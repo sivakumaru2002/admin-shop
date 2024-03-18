@@ -4,10 +4,11 @@
   flex-direction: column;
 }
 
-h2{
+h1{
   display: flex;
   flex-direction: column;
   align-items: center;
+  color:azure
 }
 
 .product-list {
@@ -18,7 +19,7 @@ h2{
   gap: 10px;
   justify-content: center;
   background-color: rgb(55, 136, 218);
-  border: 3px solid black;
+  border: 3px solid rgb(55, 136, 218);
   padding: 10px;
   margin-bottom: 20px;
 }
@@ -44,4 +45,38 @@ h2{
 
 .product-list button:hover {
   background-color: #0056b3;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-container input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+.search-container input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+.search-container input[type="text"] + .search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FuzzysearchComponent } from './fuzzysearch.component';
+import { GetgridComponent } from './getgrid.component';
 
-describe('FuzzysearchComponent', () => {
-  let component: FuzzysearchComponent;
-  let fixture: ComponentFixture<FuzzysearchComponent>;
+describe('GetgridComponent', () => {
+  let component: GetgridComponent;
+  let fixture: ComponentFixture<GetgridComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FuzzysearchComponent]
+      declarations: [GetgridComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(FuzzysearchComponent);
+    fixture = TestBed.createComponent(GetgridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

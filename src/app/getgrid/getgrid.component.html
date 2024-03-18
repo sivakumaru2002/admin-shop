@@ -1,0 +1,18 @@
+<br/>
+<h1>Grid View</h1>
+<br/>
+<div class="container">
+    <div class="search-container">
+      <input type="text" (input)="filterItems()" name="Pname" [(ngModel)]="searchText" placeholder="Search...">
+    </div>
+  </div>
+<br/>
+<div class="grid-container">
+    <div *ngFor="let i of filteredItems" class="grid-item">
+      <h3>{{i.ProductName}}</h3>
+      <p>Quantity: {{i.Quantity}}</p>
+      <button class="button" (click)="addCart(i)">Cart</button>
+      <br/>
+      <button class="button" (click)="addOrder(i)">Purchase</button>
+    </div>
+</div>

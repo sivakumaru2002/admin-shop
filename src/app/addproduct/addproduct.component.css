@@ -8,8 +8,12 @@ body {
     justify-content: center;
     align-items: center;
     gap: 80px;
+    color:azure
   }
 
+  p{
+    color :crimson;
+  }
   .container {
     display: flex;
     justify-content: center;

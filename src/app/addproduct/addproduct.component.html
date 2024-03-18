@@ -1,12 +1,13 @@
-
 <body>
 <form #ProductForm="ngForm"  (ngSubmit)="addproduct()">
     <label>Product name</label>
-    <input type="text" name="Pname"  [(ngModel)]="Pname">
-    <p *ngIf="Pname.length===0">Invalid Name</p>
+    <input type="text" name="Pname" placeholder="xyz" [(ngModel)]="Pname">
+   <!--<p *ngIf="Pname.length===0">*Invalid Name</p>--> 
+    <p *ngIf="Pnamedis ;else elseplace">*Invalid Name</p>
+    <ng-template #elseplace></ng-template>
     <label>Product quantity</label>
     <input type="number" name="Pquan" [(ngModel)]="Pquan">
-    <p *ngIf="Pquan<=0">stock is less and equal to zero</p>
+    <p *ngIf="Pquan<=0">*stock is less and equal to zero</p>
     <div class="container">
     
     <button type="submit">Add Product</button>
