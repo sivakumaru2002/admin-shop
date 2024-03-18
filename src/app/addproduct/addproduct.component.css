@@ -2,7 +2,7 @@
 body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
-    font-family: Arial, sans-serif; /* Add preferred font family */
+    font-family: cursive;
     height: 100vh; /* Ensure background covers entire viewport */
     display: flex;
     justify-content: center;
@@ -13,6 +13,7 @@ body {
 
   p{
     color :crimson;
+    font-family: cursive;
   }
   .container {
     display: flex;
@@ -47,6 +48,7 @@ form {
     align-items: center;
     align-content: center;
     justify-content: center;
+    font-family: cursive;
     font-size: xx-large;
     font-weight: 700;
 }

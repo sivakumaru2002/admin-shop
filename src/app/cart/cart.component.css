@@ -1,10 +1,22 @@
-.product-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 0 20px;
+    color:azure
   }
   
+  .grid-item {
+    background-color:  rgb(55, 136, 218);
+    padding: 20px;
+    border-radius: 5px;
+    
+    text-align: center; /* Center align content */
+  }
+  .grid-item h2{
+    font-family: cursive;
+  }
 .h2{
     display: flex;
     flex-direction: row;
@@ -12,36 +24,25 @@
     align-content: center;
     justify-content: center;
     color: azure;
+    font-family: cursive;
     font-size: xx-large;
     font-weight: 700;
 }
 
-  .product-box {
-    border: 2px solid rgb(55, 136, 218) ;
-    background-color: rgb(55, 136, 218);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    color: azure;
-  }
-  
-  .button-container {
-    margin-top: 10px;
-    
-  }
 
-  button:hover {
-    background-color: #0056b3;
-  }
+.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 170px;
   
-  
-  button {
-    border: none;
-    background-color: #007bff;
-    margin: 0 5px;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 16px; /* Adjust font size for better visibility */
-    color: azure;
-  }
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
   

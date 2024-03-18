@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes, provideRouter, withComponentInputBinding } from '@angular/router';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { GetgridComponent } from './getgrid/getgrid.component';
+import { CarouselModule } from 'primeng/carousel';
+import { ButtonModule } from 'primeng/button'; 
+import { ImageModule } from 'primeng/image'; 
 
 const appRoute: Routes =[
   {
@@ -54,13 +57,15 @@ const appRoute: Routes =[
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatSnackBarModule,
     RouterModule.forRoot(appRoute),
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
+    ButtonModule,
+    ImageModule,
+    CarouselModule,
   ],
   providers: [provideRouter(appRoute, withComponentInputBinding()), provideAnimationsAsync()],
   bootstrap: [AppComponent]

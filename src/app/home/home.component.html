@@ -1,11 +1,15 @@
-<div class="button-container">
-    <button class="button" (click)="navigate()">ADDPRODUCT</button>
-    <br>
-    <button class="button" (click)="navigate1()">GETPRODUCT</button>
-    <br>
-    <button class="button" (click)="navigate3()">CART</button>
-    <br>
-    <button class="button" (click)="navigate2()">GRID VIEW</button>
-</div>
 
-
+<p-carousel [value]="tutorials"  
+            [autoplayInterval]="1000"
+            [numVisible]="2"
+            [numScroll]="1"  
+            [circular]="true"> 
+    <ng-template let-item pTemplate="item"> 
+        <br/>
+        <br/>
+        <p-image [src]="item.image"  
+                  alt="Image" 
+                  width="400px" height="400px"> 
+        </p-image> 
+    </ng-template> 
+</p-carousel>

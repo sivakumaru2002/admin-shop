@@ -2,6 +2,7 @@ h1{
     display:flex;
     justify-content: center;
     color: azure;
+    font-family: cursive;
     font-size: xx-large;
     font-weight: 700;
 }
@@ -10,6 +11,7 @@ h1{
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     grid-gap: 20px;
     padding: 0 20px;
+    font-family: cursive;
     color:azure
   }
   
@@ -17,10 +19,13 @@ h1{
     background-color:  rgb(55, 136, 218);
     padding: 20px;
     border-radius: 5px;
+    font-family: cursive;
     text-align: center; /* Center align content */
   }
   
- 
+ .grid-item h3{
+  font-family: cursive;
+ }
     .button {
         background-color: #007bff;
         color: #fff;
@@ -37,6 +42,7 @@ h1{
       }
       .search-container {
         position: relative;
+        font-family: cursive;
       }
       
       .search-container input[type="text"] {

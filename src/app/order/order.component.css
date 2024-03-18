@@ -6,6 +6,9 @@
   gap :80px;
   color: azure;
 }
+*{
+  font-family: cursive;
+}
 
 /* Style the form elements */
 form {
@@ -17,14 +20,17 @@ form {
 }
 
 h1{    font-size: xx-large;
-  font-weight: 700;}
+  font-weight: 700;
+  font-family: cursive;}
 
 h2 {
   margin-bottom: 10px;
+  font-family: cursive;
 }
 
 h3 {
   margin-bottom: 20px;
+  font-family: cursive;
 }
 
 label {

@@ -1,21 +1,31 @@
 .nav {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+    align-items: center; /* Align items vertically */
     background: linear-gradient(to right, #add8e6, #00008b); /* Gradient from light blue to dark blue */
-    margin: 0; /* Remove default body margin */
-    padding: 0; /* Remove default body padding */
+    margin: 0;
+    padding: 20px 40px; /* Adjust padding as needed */
 }
 
-.nav {
-    justify-content: right;
-    padding: 20px; /* Add some padding for better readability */
+*{
+    font-family: cursive;
+  }
+
+.name {
+    flex: 1; /* Allow the class name to take up available space */
+    text-align: left;    
 }
 
+h1{
+    font-family: cursive;
+    font-weight: bold;
+    font-size: xx-large;
+}
 .nav h2 {
-    display: inline-block;
     margin-left: 30px; /* Add space between each link */
-    color:azure;
 }
 
 .nav h2 a {
-    color:azure;
+    color: azure;
     text-decoration: none; /* Remove underline from links */
 }

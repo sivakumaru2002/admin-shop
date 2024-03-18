@@ -26,3 +26,21 @@
 .button:hover {
     background-color: #88d6f0;
 }
+
+.carousel {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .slide {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  /* Optional: You can add additional styling for the carousel items if needed */
+  *{
+    font-family: cursive;
+  }
+  
