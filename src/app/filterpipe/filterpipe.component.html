@@ -1,0 +1,17 @@
+<br/>
+<div class="container">
+  <div class="search-container">
+    <input type="text"  name='searchText' [(ngModel)]="searchText" placeholder="Search by Product Name">
+  </div>
+</div>
+<br/>
+<div class="ccontainer">
+  <div class="product-list">
+    <div *ngFor="let product of products | filter : searchText">
+      <h2>{{ product.ProductName }}</h2>
+      <p>Quantity: {{ product.Quantity }}</p>
+    </div>
+  </div>
+</div>
+
+

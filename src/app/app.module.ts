@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, Routes, provideRouter, withComponentInputBinding } from '@angular/router';
-
-
+import {
+  RouterModule,
+  Routes,
+  provideRouter,
+  withComponentInputBinding,
+} from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,28 +21,46 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { GetgridComponent } from './getgrid/getgrid.component';
 import { CarouselModule } from 'primeng/carousel';
-import { ButtonModule } from 'primeng/button'; 
-import { ImageModule } from 'primeng/image'; 
+import { ButtonModule } from 'primeng/button';
+import { ImageModule } from 'primeng/image';
+import { FilterpipeComponent } from './filterpipe/filterpipe.component';
+import { FilterPipe } from './filter.pipe';
 
-const appRoute: Routes =[
+const appRoute: Routes = [
   {
-    path:'',redirectTo:'HOME',pathMatch:'full'
-  }
-  ,{
-    path:'HOME',component:HomeComponent
+    path: '',
+    redirectTo: 'HOME',
+    pathMatch: 'full',
   },
   {
-    path:"GETPRODUCT",component:GetproductComponent,
-  },{
-    path:'ADDPRODUCT',component:AddproductComponent,
-  },{
-    path:'CART',component:CartComponent,
-  },{
-    path:'ORDER',component:OrderComponent,
-  },{
-    path :'GETG',component:GetgridComponent,
-  }
-]
+    path: 'HOME',
+    component: HomeComponent,
+  },
+  {
+    path: 'GETPRODUCT',
+    component: GetproductComponent,
+  },
+  {
+    path: 'ADDPRODUCT',
+    component: AddproductComponent,
+  },
+  {
+    path: 'CART',
+    component: CartComponent,
+  },
+  {
+    path: 'ORDER',
+    component: OrderComponent,
+  },
+  {
+    path: 'GETG',
+    component: GetgridComponent,
+  },
+  {
+    path: 'FILTERPIPE',
+    component: FilterpipeComponent,
+  },
+];
 
 @NgModule({
   declarations: [
@@ -50,6 +71,8 @@ const appRoute: Routes =[
     OrderComponent,
     CartComponent,
     GetgridComponent,
+    FilterpipeComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +90,10 @@ const appRoute: Routes =[
     ImageModule,
     CarouselModule,
   ],
-  providers: [provideRouter(appRoute, withComponentInputBinding()), provideAnimationsAsync()],
-  bootstrap: [AppComponent]
+  providers: [
+    provideRouter(appRoute, withComponentInputBinding()),
+    provideAnimationsAsync(),
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
